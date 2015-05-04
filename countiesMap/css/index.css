@@ -1,0 +1,208 @@
+#countyNameDivContainer{
+	position:absolute;
+	top:0px;
+	left:0;
+	width:70%;
+	background-color : #f2f2f2;
+}
+
+#countyNameContainer UL LI {
+	background-color:#E68264;
+	border-color:#C4451F;
+	font-size:0.687em;
+	font-weight:bold;
+}
+#countyNameDiv {
+	height:2em;
+	width:70%;
+	vertical-align:middle;
+	padding-top:.5em;
+	text-align:center;
+}
+
+#selectParent, #selectOrg{
+	width:92%!important;
+}
+
+#RightNav {
+	position:absolute;
+	width:30%;
+	top:0px;
+	right:0px;
+	height:95%;
+}
+
+#MapContainer {
+	position:absolute;
+	top:2em;
+	bottom:2em;
+	width: 70%;
+	min-width:600px;
+	overflow:scroll;
+	min-height:570px;
+}
+
+.footer { 
+	position:absolute;
+	bottom:0px; 
+	height:2em; 
+	width:100%; 
+	background-color:#f2f2f2; 
+	overflow:hidden; 
+	text-align:center!important;
+}
+
+.footer img { height:100%; }
+
+#mapOfCounties {
+	stroke: #00ffff;
+	stroke-width: .5;
+	float:left;
+	width:70%;
+	top:0px;
+	position:relative;
+}
+
+
+.RightNavItem {
+
+}
+	
+.fltleft{ float:left; }
+.fltright{ float:right; }
+
+
+.zoomButton{
+	text-align:right;
+}
+
+
+#largeCountyFrame{
+	position:absolute;
+	top:10px;
+	left:10px;
+	right:10px;
+	bottom:32px;
+	background-color: #72D4F1;
+	margin:0!important;
+	overflow:scroll;
+}
+
+HTML BODY DIV#largeCountyFrame LI{
+	list-style-type : none;
+}
+
+#closeLargeCountyPanel{
+	float:right;top:0;right:0;position:absolute;display:block;
+}
+
+.ui-autocomplete{
+	font-size:x-small;
+}
+.ui-menu-item{
+	font-size:x-small;
+}
+.ui-widget{
+	font-size:medium;
+}
+
+HTML BODY {
+	background-color : #f2f2f2; 
+	min-width:1000px;
+	width:auto!important;
+	width:500px;
+	min-height:540px;
+	
+}
+
+HTML BODY UL#selectable {
+	display:block;
+	clear:both;
+}
+HTML BODY UL#selectable li {
+	display:inline;
+	text-align:center;
+}
+
+HTML BODY UL#selectable li:first-child {
+	margin-left:1%;
+}
+
+#selectable li button {
+	width:32%;
+	border-radius:4px;
+	
+}
+.list LI DIV:first-child {
+	max-width:400px;
+	min-width:250px;
+	width:300px;
+	display:inline-block;
+	overflow: hidden;
+	text-align:left;
+}
+
+button.tiny.round, .button.tiny.round {
+    padding-top: 0.4375em;
+    padding-right: 0.275em;
+    padding-bottom: 0.5em;
+    padding-left: 0.275em;
+    font-size: 0.5625em; 
+}
+
+.tiny.button{
+	padding:2px;
+}
+
+.list LI {
+	font-size:x-small;
+}
+
+.list LI:nth-child(even) {
+	background-color:rgba(100,200,230,0.30);
+}	
+
+.list LI DIV {
+	max-width:100px;
+	min-width:50px;
+	width:auto;
+	display:inline-block;
+	text-align:right;
+}
+
+
+#SearchResults {
+	margin-top:.4em;
+	margin-bottom:.2em;
+}
+
+HTML BODY {
+	overflow:hidden;
+}
+
+.unselectable {
+   -moz-user-select: -moz-none;
+   -khtml-user-select: none;
+   -webkit-user-select: none;
+   -ms-user-select: none;
+   user-select: none;
+}
+
+HTML BODY SVG PATH {
+	cursor:hand!important;
+}
+
+#LoadingCounties {
+	padding-top:400px;
+	height:100%;
+	width:100%;
+	background:#ccc;
+	background-repeat:no-repeat;
+	background-position:center;
+	background-image:url('/images/HealthPlanCRM.png');
+	color:#333;
+	vertical-align:50%;
+	font-size:2em;
+	text-align:center;
+}
+
