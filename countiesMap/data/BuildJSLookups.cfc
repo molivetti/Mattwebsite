@@ -44,8 +44,6 @@
 			<cfoutput>
 			//ERROR during data retrieval... : #cfcatch.Type#
 			// #cfcatch.Message#
-			var AllOLNames = new Array();
-			var AllCountiesArr = new Array();
 			</cfoutput>
 			</CFSaveContent>
 
