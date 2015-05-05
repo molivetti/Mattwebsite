@@ -1,0 +1,25 @@
+{
+    posts:[
+        {
+            title: "It's gonna take a lot to drag me away from you",
+            subtitle: "There's nothing that a hundred men or more could ever do",
+            date: "May 4, 2015",
+            link: "post.html",
+            author: "Matt O.",
+        },
+        {
+            title: "title2 here please",
+            subtitle: "awwww yeah look at this subtitle",
+            date: "April 23, 2015",
+            link: "post1.html",
+            author: "Matt O.",
+        },
+        {
+            title: "title3 aqui por favor",
+            subtitle: "can't even handle this cray cray",
+            date: "February 7, 2015",
+            link: "post2.html",
+            author: "Matt O.",
+        }
+    ]
+}
