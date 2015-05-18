@@ -37,20 +37,7 @@
     <div class="nav-container"></div>
 
     <!-- Page Header -->
-    <!-- Set your background image for this header on the line below. -->
-    <header class="intro-header" style="background-image: url('img/post-bg.jpg')">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
-                    <div class="post-heading">
-                        <h1>Man must explore, and this is exploration at its greatest</h1>
-                        <h2 class="subheading">Problems look mighty small from 150 miles up</h2>
-                        <span class="meta">Posted by <a href="#">Start Bootstrap</a> on August 24, 2014</span>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </header>
+    <div class="header-container"></div>    
 
     <!-- Post Content -->
     <article>
@@ -112,6 +99,33 @@
 
     <!-- Custom Theme JavaScript -->
     <script src="js/clean-blog.min.js"></script>
+    
+    <script id="post-template" type="text/x-handlebars-template">
+        <header class="intro-header" style="background-image: url('{{bg-img}}')">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                        <div class="post-heading">
+                            <h1>Man must explore, and this is exploration at its greatest</h1>
+                            <h2 class="subheading">Problems look mighty small from 150 miles up</h2>
+                            <span class="meta">Posted by <a href="#">Start Bootstrap</a> on August 24, 2014</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+    </script>
+    
+    <script>
+    var postsJSON; 
+    var source   = $("#post-template").html();
+    var template = Handlebars.compile(source);
+    $.getJSON("data/post-content.json", function(data){
+        console.log(data);
+        postsJSON = data;
+        $(".posts-container").html(template(postsJSON));
+    });
+    </script>
 
 </body>
 

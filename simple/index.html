@@ -53,25 +53,10 @@
     </header>
 
     <!-- Main Content -->
-    <div class="container">
-        <div class="row">
-            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
-                <div class="post-preview">
-                    <a href="post.html">
-                        <h2 class="post-title">
-                            It's gonna take a lot to drag me away from you
-                        </h2>
-                        <h3 class="post-subtitle">
-                            There's nothing that a hundred men or more could ever do
-                        </h3>
-                    </a>
-                    <p class="post-meta">Posted by <a href="#">Matt O.</a> on March 4, 2015</p>
-                </div>
-                <hr>
-            </div>
-        </div>
-    </div>
+    <div class="posts-container"></div>
     
+    <!-- Post with pager, will incorporate pager later -->
+    <!--
     <div class="container">
         <div class="row">
             <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
@@ -86,8 +71,8 @@
                     </a>
                     <p class="post-meta">Posted by <a href="#">Matt O.</a> on March 4, 2015</p>
                 </div>
-                <hr>
-                <!-- Pager -->
+                <hr>          
+
                 <ul class="pager">
                     <li class="next">
                         <a href="#">Older Posts &rarr;</a>
@@ -96,6 +81,7 @@
             </div>
         </div>
     </div>
+    -->
 
     <!-- Footer -->
     <div class="footer-container"></div>
@@ -114,12 +100,63 @@
     <!-- Custom Theme JavaScript -->
     <script src="js/clean-blog.min.js"></script>
     
-    <script>
-        var posts;
-        $.getJSON("data/post-previews.json", function(data){
-            console.log(data.posts);
-        });
+    <script id="post-template" type="text/x-handlebars-template">
+        {{#each post-content}}
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                    <div class="post-preview">
+                        <a href="{{link}}">
+                            <h2 class="post-title">
+                                {{title}}
+                            </h2>
+                            <h3 class="post-subtitle">
+                                {{subtitle}}
+                            </h3>
+                        </a>
+                        <p class="post-meta">Posted by <a href="#">{{author}}</a> on {{date}}</p>
+                    </div>
+                    <hr>
+                </div>
+            </div>
+        </div>
+        {{else}}
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                    <div class="post-preview">
+                        <a href="#">
+                            <h2 class="post-title">
+                                Uh oh.
+                            </h2>
+                            <h3 class="post-subtitle">
+                                No posts found! 
+                            </h3>
+                        </a>
+                        <p class="post-meta">Posted by <a href="#">lol</a> on February 30th, 2016</p>
+                    </div>
+                    <hr>
+                </div>
+            </div>
+        </div>
+        {{/each}}
     </script>
+    
+    <script>
+        
+        var postsJSON; 
+        var source   = $("#post-template").html();
+        var template = Handlebars.compile(source);
+        $.getJSON("data/post-content.json", function(data){
+            console.log(data);
+            postsJSON = data;
+            $(".posts-container").html(template(postsJSON));
+        }); 
+
+        
+    </script>
+    
+
 
 </body>
 
